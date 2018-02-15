@@ -1,0 +1,26 @@
+en:
+  SITE:
+    TITLE: bitbear
+    DESCRIPTION: intentionally left blank
+    COPYRIGHT: none
+  SUBSCRIBE: Subscribe
+  MONTHS_OF_THE_YEAR: [January, February, March, April, May, June, July, August, September, October, November, December]
+  DAYS_OF_THE_WEEK: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+  READ_MORE: Continue reading...
+  RANDOM_ARTICLE: Random Article
+  RELATED_POSTS: Related Posts
+  ARCHIVES: Archives
+  POPULAR_TAGS: Popular Tags
+  PUBLISHED_BY: Published by
+  PREVIOUS: Previous
+  NEXT: Next
+  PAGE: Page
+
+de:
+  SITE:
+    TITLE: Mein Blog
+    DESCRIPTION: Blogging über dies und das
+    COPYRIGHT: © Copyright %s deine Firma
+  SUBSCRIBE: Abonnieren
+  MONTHS_OF_THE_YEAR: [Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+  DAYS_OF_THE_WEEK: [Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag]

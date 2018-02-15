@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ grav.language.getLanguage ?: 'en' }}">
+<head>
+    {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+    {% block head %}
+        <meta charset="utf-8" />
+        <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+        {% include 'partials/metadata.html.twig' %}
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+
+        {% block stylesheets %}
+            <link rel='stylesheet' id='style-css'  href='{{ url('theme://css/style.css') }}' type='text/css' media='all' />
+            <link rel='stylesheet' id='tufte.css'  href='{{ url('theme://css/tufte.css') }}' type='text/css' media='all' />
+        {% endblock %}
+        {{ assets.css() }}
+
+        {% block javascripts %}
+            {% do assets.add('jquery',101) %}
+        {% endblock %}
+        {{ assets.js() }}
+
+
+    {% endblock %}
+</head>
+
+<body class="home blog">
+    <div id="page" class="hfeed site container">
+    {% block sidebar %}
+        {% include 'partials/sidebar.html.twig' %}
+    {% endblock %}
+    {% block body %}
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main" role="main">
+                    {% block content %}
+                    {% endblock %}
+                </main>
+            </div>
+        </div>
+    {% endblock %}
+    <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="site-info">
+            <a href="http://getgrav.org/">{{ 'SITE.COPYRIGHT'|t("now"|date('Y')) }}</a>
+        </div>
+    </footer>
+
+</div>
+
+{% block javascripts_bottom %}
+    <script type='text/javascript'>
+    /* <![CDATA[ */
+    var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+    /* ]]> */
+    </script>
+{% endblock %}
+
+</body>
+</html>
